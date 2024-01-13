@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Black+Ops+One&family=Dhurjati&family=Josefin+Sans:wght@100;300;400&display=swap');
+*, body, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Alegreya', serif;
+    font-family: 'Dhurjati', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 10px;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px black;
+}
+:root{
+    --mainColor: #039195;
+    --mainMargin: 60px auto;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/bg.jpg");
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    padding: 0 2rem;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+nav ul li{
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    transform: translateY(-1px);
+    text-decoration: underline;
+    color: var(--mainColor);
+    cursor: pointer;
+}
+header div{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+}
+header div h1 , h2{
+    font-size: 5rem;
+}
+header div h2{
+    font-size: 4rem;
+    border-right: .2rem solid white;
+    width: 0rem;
+    height: 4rem;
+    overflow: hidden;
+    animation: write 6s infinite alternate;
+    margin: 1rem 0;
+}
+@keyframes write{
+    to{
+        width:27rem;
+    }
+}
+header div p{
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+header div a{
+    width: 10rem;
+    height: 3rem;
+    padding: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 2rem;
+    border: none;
+    font-weight: bolder;
+    background-color: var(--mainColor);
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+header div a:hover{
+    scale: 1.08;
+    color: black;
+    background-color: white;
+}
+.anim_head{
+    width: 2.5rem;
+    height: 4.5rem;
+    border: .1rem solid white;
+    border-radius: 1.5rem;
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: .7rem;
+}
+.anim_head div{
+    width: 1rem;
+    height: 1rem;
+    background-color: white;
+    border-radius: 50%;
+    animation: head_anim 3s infinite;
+}
+@keyframes head_anim {
+    to{
+        transform: translateY(2rem);
+        opacity: 0;
+    }
+}
+.proto_label{
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 4rem;
+    color: var(--mainColor);
+    text-shadow: 0px 2px 5px black;
+}
+section.proj{
+    width: 80%;
+    height: 800px;
+    margin: var(--mainMargin);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+section.proj > div{
+    width: 32%;
+    height: 48%;
+    overflow: hidden;
+    color: white;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: 0px 1px 5px black;
+}
+section.proj > div > div{
+    overflow: hidden;
+    width: 100%;
+    height: 60%;
+}
+section.proj > div > div:nth-child(2){
+    padding: 1rem;
+}
+section.proj > div > div img:nth-child(1){
+    width: 100%;
+    height: 100%;
+    filter: grayscale(10%);
+    transition: all 1s ease-in-out;
+}
+section.proj > div > div img:nth-child(1):hover{
+    scale: 1.05;
+}
+section.proj > div > div p:nth-child(1){
+    color: rgb(168, 163, 163);
+    font-size: 1.2rem;
+}
+section.proj > div > div p:nth-child(2){
+    font-size: 1.8rem;
+    color: black;
+    margin: 1rem 0;
+}
+section.proj > div > div button:nth-child(3){
+    font-size: 1.2rem;
+    border: none;
+    background-color: transparent;
+    font-weight: bolder;
+    transition:all .5s ease-in-out;
+}
+section.proj > div > div button:nth-child(3) a{
+    color: var(--mainColor);
+    text-decoration: none;
+    cursor: pointer;
+}
+section.proj > div > div button:nth-child(3):hover{
+    transform:translateX(5px);
+    text-shadow: 1px 1px 1px black;
+}
+.contact_me{
+    width: 80%;
+    height: 250px;
+    margin: var(--mainMargin);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact_me >div{
+    width: calc(92% / 4);
+    height: 90%;
+    background-color: black;
+    border-radius: 1rem;
+    background-color: white;
+    box-shadow: 0px 1px 5px black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.contact_me i{
+    font-size: 3rem;
+}
+.contact_me h3{
+    font-size: 1.5rem;
+}
+.contact_me h4{
+    font-size: 1rem;
+}
+.contact_me h4.phone a,
+.contact_me h4.Gmail a{
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+}
+.contact_me h4 a:hover{
+    filter: drop-shadow(1px 1px 1px #636c6c);
+    font-weight: bolder;
+}
+.contact_me h4 a i{
+    font-size: 1rem;
+    margin-right: 1.1rem;
+    color: black;
+}
+.arrow_up{
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--mainColor);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 4rem;
+    right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.arrow_up a i{
+    font-size: 2rem;
+    color: white;
+}
+
+
+
+
+@media (max-width:600px) {
+    *, body, ::before, ::after{
+        font-size: 11px;
+    }  
+    section.proj{
+        height: calc(400*6px);
+    }
+    section.proj > div{
+        width: 100%;
+        height: calc(92% / 6);
+        margin-bottom: 2rem;
+    }
+    .contact_me{
+        width: 80%;
+        height: 300px;
+        justify-content: space-between;
+    }
+    .contact_me >div{
+        width: calc(92% / 2);
+        height: calc(90% / 2);
+    }
+    .contact_me h4.Gmail a{
+    font-size: .7rem;
+    }
+    .proto_label{
+        text-shadow: 0px .5px 2px black;
+    }
+    .arrow_up{
+        bottom: 2rem;
+        right: 1rem;
+    }
+    header div p{
+        font-size: 1.55rem;
+    }
+}    
+@media (min-width:601px) and (max-width:992px)  {
+    *, body, ::before, ::after{
+        font-size: 13px;
+    }
+    header{
+        background-attachment:local;
+    }
+    section.proj > div{
+        width: 48%;
+        height: calc(96% / 3);
+        margin-bottom: 2rem;
+        margin-right: 2%;
+    }
+    section.proj{
+        height: calc(400 * 3px);
+    }
+    nav ul li a{
+        font-size: 2.1rem;
+    }
+    nav ul li a i{
+        font-size: 2rem;
+    }
+    nav{
+        padding: 0 3rem;
+    }
+    header div{
+        padding: 0 3rem;
+    }
+    .contact_me{
+        width: 80%;
+        height: 150px;
+    }
+    .contact_me h4.Gmail a{
+    font-size: .7rem;
+    }
+    .proto_label{
+        text-shadow: 0px 1px 3px black;
+    }
+    .arrow_up{
+        bottom: 2rem;
+        right: 1.9rem;
+    }
+}
+@media (min-width:993px) and (max-width: 1500px) {
+    *, body, ::before, ::after{
+        font-size: 15.5px;
+    }
+    nav ul li a{
+        font-size: 1.5rem;
+    }
+    nav ul li a i{
+        font-size: 1.5rem;
+    }
+    nav{
+        padding: 0 4rem;
+    }
+    header div{
+        padding: 0 4rem;
+    }
+    header{
+        background-attachment:fixed;
+    }  
+}
+@media (min-width:1501px) {
+    header{
+        background-attachment:fixed;
+    } 
+}
+
